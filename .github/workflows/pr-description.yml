@@ -1,0 +1,12 @@
+name: PR Description Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  pr-description:
+    uses: zocks-communications/workflows/.github/workflows/pr-description-required.yaml@cbc078ea39a349878abc40ad1c22ce6e6919d257 # v9.20.0
+    permissions:
+      contents: read
+      pull-requests: read
